@@ -5,6 +5,7 @@ import store from './store'
 import './registerServiceWorker'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+import './style/base.scss'
 Vue.use(Antd)
 
 
