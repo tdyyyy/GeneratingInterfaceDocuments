@@ -1,3 +1,21 @@
+@media all and (max-width: 500px){
+  .ant-layout-sider {
+    display: none;
+  }
+  .trigger {
+    display: none;
+  }
+}
+.all_table {
+  width: 100%;
+  overflow: scroll;
+}
+.ant-table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 ::-webkit-scrollbar{width:0px;}
 .ant-layout-header {
   height: 50px!important;

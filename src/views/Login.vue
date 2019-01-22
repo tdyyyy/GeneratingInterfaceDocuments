@@ -44,6 +44,7 @@
                 e.preventDefault();
                 this.form.validateFields((err, values) => {
                     if (!err) {
+                        sessionStorage.setItem('ioaLoginCount', values.userName)
                         console.log('Received values of form: ', values);
                         this.$router.push({
                             name: 'project'
