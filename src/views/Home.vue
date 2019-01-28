@@ -5,7 +5,7 @@
             <a-layout-sider :trigger="null" collapsible v-model="collapsed">
                 <div v-if="!collapsed" class="logo" />
                 <div v-if="collapsed" class="blog_logo" />
-                <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']">
+                <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']" :selectedKeys="[current]" @click="menuRouter">
                     <a-menu-item key="1">
                         <a-icon type="ordered-list" />
                         <span>我的项目</span>
@@ -44,15 +44,32 @@
         data(){
             return {
                 collapsed: false,
-                loginUser: ''
+                loginUser: '',
+                current: '1',
+                routers: ['', '/project', '', '/test']
             }
         },
         created () {
             this.loginUser = sessionStorage.getItem('ioaLoginCount')
+            this.$message.success('来了，老弟~');
         },
         methods: {
             logOut () {
-                this.$router.push('/login')
+                const _this = this
+                this.$confirm({
+                    title: '提示',
+                    content: '不再多待一会吗？',
+                    okText: '确认',
+                    cancelText: '取消',
+                    onOk() {
+                        return _this.$router.push('/login')
+                    },
+                    onCancel() {},
+                });
+            },
+            menuRouter (item) {
+                this.current = item.key
+                this.$router.push(this.routers[+item.key])
             }
         }
     }
@@ -88,8 +105,9 @@
             .login_name{
                 line-height: 50px;
                 margin-right: 20px;
+                margin-left: 10px;
                 font-style: normal;
-                font-weight: bold;
+                font-size: 14px;
             }
         }
     }

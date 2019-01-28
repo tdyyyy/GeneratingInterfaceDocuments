@@ -10,15 +10,21 @@
   width: 100%;
   overflow: scroll;
 }
-.ant-table td {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+.ant-table td { white-space: nowrap; }
 
 ::-webkit-scrollbar{width:0px;}
 .ant-layout-header {
   height: 50px!important;
+}
+.drawer_footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #e9e9e9;
+  padding: 10px 16px;
+  background: #fff;
+  text-align: right;
 }
 
 #components-layout-demo-custom-trigger .trigger {

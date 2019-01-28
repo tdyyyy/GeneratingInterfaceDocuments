@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from './views/Login.vue'
 import Home from './views/Home.vue'
 import Project from './views/page/project.vue'
+import Test from './views/page/test.vue'
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
           path: '/project',
           name: 'project',
           component: Project
+
+      }, {
+          path: '/test',
+          name: 'test',
+          component: Test
 
       }]
     }
