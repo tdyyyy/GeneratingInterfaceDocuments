@@ -8,7 +8,7 @@
                 <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']" :selectedKeys="[current]" @click="menuRouter">
                     <a-menu-item key="1">
                         <a-icon type="ordered-list" />
-                        <span>我的项目</span>
+                        <span>我的系统</span>
                     </a-menu-item>
                     <a-menu-item key="2">
                         <a-icon type="book" />

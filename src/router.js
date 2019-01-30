@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Login from './views/Login.vue'
 import Home from './views/Home.vue'
 import Project from './views/page/project.vue'
+import ProjectEdit from './views/page/project_edit.vue'
+import InterfaceAdd from './views/page/interface_add.vue'
 import Test from './views/page/test.vue'
 
 Vue.use(Router)
@@ -10,19 +12,26 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-        path: '/login',
+        path: '/',
         name: 'login',
         component: Login
     },
     {
-      path: '/',
+      path: '/project',
       name: 'home',
       component: Home,
       children: [{
           path: '/project',
           name: 'project',
           component: Project
-
+      }, {
+          path: '/project_edit/:id',
+          name: 'project_edit',
+          component: ProjectEdit
+      }, {
+          path: '/interface_add',
+          name: 'interface_add',
+          component: InterfaceAdd
       }, {
           path: '/test',
           name: 'test',

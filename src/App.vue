@@ -16,9 +16,6 @@
   }
 </script>
 <style lang="scss">
-body{
-  margin-top: -200px;
-}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +23,7 @@ body{
   text-align: center;
   color: #2c3e50;
   height: 100%;
+  margin-top: -20px;
 }
 </style>
 
