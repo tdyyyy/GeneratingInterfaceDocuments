@@ -25,11 +25,11 @@ export default new Router({
           name: 'project',
           component: Project
       }, {
-          path: '/project_edit/:id',
+          path: '/project/project_edit',
           name: 'project_edit',
           component: ProjectEdit
       }, {
-          path: '/interface_add',
+          path: '/project/interface_add',
           name: 'interface_add',
           component: InterfaceAdd
       }, {

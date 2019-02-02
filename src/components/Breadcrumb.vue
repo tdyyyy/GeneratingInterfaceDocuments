@@ -29,10 +29,16 @@
     .bread_contain {
         font-size: 18px;
         width: 100%;
-        height: 30px;
+        height: 40px;
+        line-height: 30px;
+        padding-top: 10px;
         border-bottom: 1px solid #eef0f4;
         display:flex;
         justify-content: flex-start;
         margin-bottom: 10px;
+        position: fixed;
+        top: 60px;
+        z-index: 10;
+        background-color: #fff;
     }
 </style>

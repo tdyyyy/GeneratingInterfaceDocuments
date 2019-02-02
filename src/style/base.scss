@@ -48,6 +48,20 @@
     }
 }
 
+.mar_btn {
+  margin-right: 10px;
+}
+#app .content {
+  position: relative;
+}
+.body_content {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  right: 10px;
+  overflow: scroll;
+  z-index: 1;
+}
 
 #components-layout-demo-custom-trigger .trigger {
   font-size: 18px;

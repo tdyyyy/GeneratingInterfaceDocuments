@@ -1,18 +1,19 @@
 <template>
-  <div id="project">
+  <div id="project" class="wrap">
     <!-- 面包屑 -->
     <bread-crumb :routes="routes"></bread-crumb>
     <!-- 表格 -->
-
-    <a-button  type="primary" class="editable-add-btn" @click="showDrawer">新增系统</a-button>
-    <div class="all_table">
-      <a-table bordered :dataSource="dataSource" :columns="columns" :scroll="{ x: true }" :pagination="false">
-        <template slot="operation" slot-scope="text, record">
-          <a-button type="primary" class="mar_btn" @click="onEdit(record)" size="small">编辑</a-button>
-          <a-button type="primary" class="mar_btn" @click="onWord(record)"  size="small">导出word文档</a-button>
-          <a-button type="danger" @click="onDelete(record)"  size="small">删除</a-button>
-        </template>
-      </a-table>
+    <div class="body_content">
+        <a-button  type="primary" class="editable-add-btn" @click="showDrawer">新增系统</a-button>
+        <div class="all_table">
+          <a-table bordered :dataSource="dataSource" :columns="columns" :scroll="{ x: true }" :pagination="false">
+            <template slot="operation" slot-scope="text, record">
+              <a-button type="primary" class="mar_btn" @click="onEdit(record)" size="small">编辑</a-button>
+              <a-button type="primary" class="mar_btn" @click="onWord(record)"  size="small">导出word文档</a-button>
+              <a-button type="danger" @click="onDelete(record)"  size="small">删除</a-button>
+            </template>
+          </a-table>
+        </div>
     </div>
     <!-- 抽屉 -->
     <a-drawer title="Create a new project" :width="720" @close="onClose" :visible="visible"
@@ -86,7 +87,10 @@
         },
         methods: {
             onEdit (record) {
-                this.$router.push(`/project_edit/${record.id}`)
+                this.$router.push( {
+                    path: `/project/project_edit`,
+                    query: record.id
+                })
             },
             onDelete (record) {
                 console.log(record)
@@ -126,9 +130,6 @@
     .editable-add-btn {
       margin-bottom: 8px;
       float: right;
-    }
-    .mar_btn {
-      margin-right: 10px;
     }
   }
 
