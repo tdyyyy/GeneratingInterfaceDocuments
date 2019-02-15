@@ -1,5 +1,6 @@
 <template>
-  <div class="login" :style="{background: 'url('+backgroundImg+')'}">
+  <!--<div class="login" :style="{background: 'url('+backgroundImg+')'}">-->
+    <div class="login">
     <div class="login_contain">
       <p class="login_text">接口文档管理中心</p>
       <a-form :form="form" id='components-form-demo-normal-login' @submit="handleSubmit" class='login-form'>
@@ -65,6 +66,7 @@
   .login{
     width: 100%;
     height: 100%;
+    background: url('http://ioaly.cn/image/cat.f4a30b32.jpg');
     background-size: cover;
   }
   .login_contain {
