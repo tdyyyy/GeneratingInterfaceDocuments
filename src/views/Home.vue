@@ -62,7 +62,7 @@
                     okText: '确认',
                     cancelText: '取消',
                     onOk() {
-                        return _this.$router.push('/login')
+                        return _this.$router.push('/')
                     },
                     onCancel() {},
                 });
