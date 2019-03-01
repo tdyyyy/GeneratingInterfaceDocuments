@@ -139,6 +139,10 @@
             },
             onDelete (key) {
                 const dataSource = [...this.dataSource]
+                if (dataSource.length === 1) {
+                    this.$message.info('老弟,不能再删了~');
+                    return false
+                }
                 this.dataSource = dataSource.filter(item => item.key !== key)
             },
             back () {
